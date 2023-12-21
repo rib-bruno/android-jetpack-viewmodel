@@ -11,8 +11,9 @@ import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 import me.dio.urlshortener.core.Event
 import me.dio.urlshortener.domain.UrlsRepository
+import javax.inject.Inject
 
-class UrlsViewModel(
+class UrlsViewModel @Inject constructor (
     private val repository: UrlsRepository
 ) : ViewModel() {
     private val _action = MutableLiveData<Event<UrlsAction>>()

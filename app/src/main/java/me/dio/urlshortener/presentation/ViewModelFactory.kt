@@ -13,6 +13,7 @@ class ViewModelFactory : ViewModelProvider.Factory {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>, extras: CreationExtras): T {
         val service = RetrofitServiceProvider.create<HideUriService>()
+
         val repository = UrlsRepositoryImpl(
             localDataSource = UrlShortenerLocalDataSource(),
             remoteDataSource = UrlShortenerRemoteDataSource(service),

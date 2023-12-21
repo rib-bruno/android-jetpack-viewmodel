@@ -7,8 +7,11 @@ import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.update
 import me.dio.urlshortener.data.datasource.UrlShortenerDataSource
 import me.dio.urlshortener.domain.ShortenedUrl
+import javax.inject.Inject
 
-class UrlShortenerLocalDataSource : UrlShortenerDataSource.Local {
+class UrlShortenerLocalDataSource @Inject constructor(
+    // TODO fazer private val dao: ShortenedUrlDao
+) : UrlShortenerDataSource.Local {
     private val urls = MutableStateFlow(emptyList<ShortenedUrl>())
 
     override fun getAll(): Flow<List<ShortenedUrl>> = urls.onStart {
