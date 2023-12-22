@@ -17,6 +17,7 @@ class DataLocalModule {
     @Provides
     @Singleton //mesma referência para todos
     fun provideDatabase(context: Context) : AppDatabase =
+        //TODO - CRIAR O APPDATABASE
         Room.databaseBuilder(context, AppDatabase::class.java, "app.db")
             .build()
 

@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
@@ -13,6 +14,7 @@ import me.dio.urlshortener.core.Event
 import me.dio.urlshortener.domain.UrlsRepository
 import javax.inject.Inject
 
+@HiltViewModel
 class UrlsViewModel @Inject constructor (
     private val repository: UrlsRepository
 ) : ViewModel() {
