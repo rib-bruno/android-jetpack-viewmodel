@@ -4,7 +4,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import me.dio.urlshortener.data.UrlsRepositoryImpl
+import me.dio.urlshortener.data.repository.UrlsRepositoryImpl
 import me.dio.urlshortener.data.datasource.UrlShortenerDataSource
 import me.dio.urlshortener.data.datasource.impl.UrlShortenerLocalDataSource
 import me.dio.urlshortener.data.datasource.impl.UrlShortenerRemoteDataSource
