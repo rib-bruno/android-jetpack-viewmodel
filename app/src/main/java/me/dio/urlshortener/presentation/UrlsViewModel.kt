@@ -18,6 +18,7 @@ import javax.inject.Inject
 class UrlsViewModel @Inject constructor (
     private val repository: UrlsRepository
 ) : ViewModel() {
+
     private val _action = MutableLiveData<Event<UrlsAction>>()
     val action: LiveData<Event<UrlsAction>> = _action
 
